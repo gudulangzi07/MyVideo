@@ -1,0 +1,1 @@
+include ':app', ':AlivePlayer', ':AlivcReporter', ':Aliplayer', ':AliyunVodPlayer'

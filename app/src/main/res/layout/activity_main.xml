@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.main.activity.MainActivity">
+
+    <com.video.app.widget.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom"/>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:background="@color/color_d3d3d3"/>
+
+        <com.video.app.base.bottombar.BottomTabBar
+            android:id="@+id/btl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_tabBar_height"
+            android:background="@color/color_ffffff"
+            app:TabAnimate="Scale"
+            app:TabNormalColor="@color/color_888888"
+            app:TabSelectColor="@color/color_000000"
+            app:TabTextSize="@dimen/font10"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

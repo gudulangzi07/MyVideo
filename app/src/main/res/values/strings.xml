@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyVideo</string>
+
+    <string name="retrieve">获取验证码</string>
+
+    <string name="main_1">选车</string>
+    <string name="main_2">拼团</string>
+    <string name="main_3">消息</string>
+    <string name="main_mine">我的</string>
+</resources>
