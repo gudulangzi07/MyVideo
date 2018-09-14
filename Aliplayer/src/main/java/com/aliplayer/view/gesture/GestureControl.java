@@ -63,7 +63,7 @@ public class GestureControl {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_UP:
                     case MotionEvent.ACTION_CANCEL:
-//对结束事件的监听
+                    //对结束事件的监听
                         if (mGestureListener != null) {
                             mGestureListener.onGestureEnd();
                         }
@@ -76,7 +76,7 @@ public class GestureControl {
                     default:
                         break;
                 }
-//其他的事件交给GestureDetector。
+                //其他的事件交给GestureDetector。
                 return mGestureDetector.onTouchEvent(event);
 
             }

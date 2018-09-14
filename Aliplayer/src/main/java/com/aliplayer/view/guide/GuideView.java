@@ -32,13 +32,11 @@ public class GuideView extends LinearLayout implements ITheme {
     private TextView mBrightText, mProgressText, mVolumeText;
 
     public GuideView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public GuideView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public GuideView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -73,7 +71,7 @@ public class GuideView extends LinearLayout implements ITheme {
             hide();
             return;
         }
-//只有第一次进入全屏的时候显示。通过SharedPreferences记录这个值。
+        //只有第一次进入全屏的时候显示。通过SharedPreferences记录这个值。
         SharedPreferences spf = getContext().getSharedPreferences("alivc_guide_record", Context.MODE_PRIVATE);
         boolean hasShown = spf.getBoolean("has_shown", false);
         //如果已经显示过了，就不接着走了
@@ -127,7 +125,7 @@ public class GuideView extends LinearLayout implements ITheme {
         }
 
         int color = ContextCompat.getColor(getContext(), colorRes);
-//这三个text的颜色会改变
+        //这三个text的颜色会改变
         mBrightText.setTextColor(color);
         mProgressText.setTextColor(color);
         mVolumeText.setTextColor(color);

@@ -13,7 +13,7 @@ import com.alivc.player.VcPlayerLog;
 
 /**
  * 手势滑动的view。用于UI中处理手势的滑动事件，从而去实现手势改变亮度，音量，seek等操作。
- * 此view主要被{@link com.aliyun.vodplayerview.widget.AliyunVodPlayerView} 使用。
+ * 此view主要被{@link com.aliplayer.widget.AliyunVodPlayerView} 使用。
  */
 public class GestureView extends View implements ViewAction {
 
@@ -30,13 +30,11 @@ public class GestureView extends View implements ViewAction {
     private boolean mIsFullScreenLocked = false;
 
     public GestureView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public GestureView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public GestureView(Context context, AttributeSet attrs, int defStyleAttr) {

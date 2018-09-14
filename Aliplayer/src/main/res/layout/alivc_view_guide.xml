@@ -18,13 +18,11 @@
             android:layout_weight="1"
             android:src="@drawable/alivc_guide_left" />
 
-
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/alivc_guide_center" />
-
 
         <ImageView
             android:layout_width="0dp"
@@ -46,7 +44,6 @@
             android:layout_weight="1"
             android:gravity="center_horizontal|bottom"
             android:orientation="vertical">
-
 
             <TextView
                 android:layout_width="wrap_content"

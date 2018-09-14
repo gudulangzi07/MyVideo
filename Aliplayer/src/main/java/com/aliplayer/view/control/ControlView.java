@@ -43,7 +43,6 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
 
     private static final String TAG = ControlView.class.getSimpleName();
 
-
     //标题，控制条单独控制是否可显示
     private boolean mTitleBarCanShow = true;
     private boolean mControlBarCanShow = true;
@@ -63,13 +62,11 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
     //下载
     private ImageView mTitleDownload;
 
-
     //锁定屏幕方向相关
     // 屏幕方向是否锁定
     private boolean mScreenLocked = false;
     //锁屏按钮
     private ImageView mScreenLockBtn;
-
 
     //切换大小屏相关
     private AliyunScreenMode mAliyunScreenMode = AliyunScreenMode.Small;
@@ -86,7 +83,6 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
     //视频缓冲进度
     private int mVideoBufferPosition;
     //这些是大小屏都有的==========END========
-
 
     //这些是大屏时显示的
     //大屏的底部控制栏
@@ -114,7 +110,6 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
     private TextView mSmallDurationText;
     //seek进度条
     private SeekBar mSmallSeekbar;
-
 
     //整个view的显示控制：
     //不显示的原因。如果是错误的，那么view就都不显示了。
@@ -188,7 +183,6 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
         mLargeSeekbar = (SeekBar) findViewById(R.id.alivc_info_large_seekbar);
         mLargeChangeQualityBtn = (Button) findViewById(R.id.alivc_info_large_rate_btn);
 
-
         mSmallInfoBar = findViewById(R.id.alivc_info_small_bar);
         mSmallPositionText = (TextView) findViewById(R.id.alivc_info_small_position);
         mSmallDurationText = (TextView) findViewById(R.id.alivc_info_small_duration);
@@ -248,7 +242,6 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
                 Toast.makeText(getContext(), "功能正在开发中, 敬请期待....", Toast.LENGTH_SHORT).show();
             }
         });
-
 
         //大小屏按钮监听
         mScreenModeBtn.setOnClickListener(new OnClickListener() {
@@ -498,12 +491,11 @@ public class ControlView extends RelativeLayout implements ViewAction, ITheme {
             thumbResId = (R.drawable.alivc_info_seekbar_thumb_red);
         }
 
-
         //这个很有意思。。哈哈。不同的seekbar不能用同一个drawable，不然会出问题。
         // https://stackoverflow.com/questions/12579910/seekbar-thumb-position-not-equals-progress
 
         //设置到对应控件中
-        Resources resources = getResources();
+        //Resources resources = getResources();
         Drawable smallProgressDrawable = ContextCompat.getDrawable(getContext(), progressDrawableResId);
         Drawable smallThumb = ContextCompat.getDrawable(getContext(), thumbResId);
         mSmallSeekbar.setProgressDrawable(smallProgressDrawable);
